@@ -1,17 +1,14 @@
 <template>
-  <div class="hello">
-    <h1>{{ msg }}</h1>
-    
-  </div>
+  <header>
+    <img :src="`${logo}`" alt="Logo Spotify">
+  </header>
 </template>
 
 <!-- SCRIPTS -->
 <script>
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
+  name: 'Header',
+  props: ['logo']
 }
 </script>
 
