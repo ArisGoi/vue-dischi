@@ -29,4 +29,5 @@ body {
 main{
     height: calc(100vh - $header-height);
     width: 100%;
+    background-color: $bg-body;
 }
