@@ -1,13 +1,32 @@
 @import './vars.scss';
+
+// Google fonts 300 / 400 / 500
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
 
 // Reset
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    $container-margin: auto;
+    &-l{
+        width: 95%;
+        margin: $container-margin;
+    }
+    &-m{
+        max-width: 1600px;
+        margin: $container-margin;
+    }
+}
+
+main{
+    height: calc(100vh - $header-height);
+    width: 100%;
 }

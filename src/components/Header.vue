@@ -1,6 +1,8 @@
 <template>
   <header>
-    <img :src="`${logo}`" alt="Logo Spotify">
+      <div class="container-l">
+          <img :src="`${logo}`" alt="Logo Spotify">
+      </div>
   </header>
 </template>
 
@@ -16,4 +18,8 @@ export default {
 <style scoped lang="scss">
 @import '../assets/style/style.scss';
 
+    header{
+        height: $header-height;
+        background-color: $bg-header;
+    }
 </style>

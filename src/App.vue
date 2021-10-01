@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header logo="./assets/spotify-logo.png"/>
+    <Header logo="./assets/img/spotify-logo.png"/>
     <main>
       <Albums/>
     </main>
@@ -21,5 +21,6 @@ export default {
 </script>
 
 <style lang="scss">
+@import './assets/style/style.scss';
 
 </style>
