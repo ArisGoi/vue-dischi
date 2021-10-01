@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Header logo="./assets/img/spotify-logo.png"/>
+    <Header :logo="require('./assets/img/spotify-logo.png')"/>
     <main>
       <Albums/>
     </main>
