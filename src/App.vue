@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <Header :logo="require('./assets/img/spotify-logo.png')"/>
+    <Header :logo="require('./assets/img/spotify-logo.png')" @search="filterSel"/>
     <main>
-      <Albums/>
+      <Albums :opr="filterSel"/>
     </main>
   </div>
 </template>
@@ -16,7 +16,7 @@ export default {
   components: {
     Header,
     Albums,
-  }
+  },
 }
 </script>
 

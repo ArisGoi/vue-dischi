@@ -2,6 +2,12 @@
   <header>
       <div class="container-l">
           <img class="logo" :src="`${logo}`" alt="Logo Spotify">
+          <select v-model="selGenre" @change="$emit('filterSel', selGenre)">
+              <option value="all">all</option>
+              <option value="rock">rock</option>
+              <option value="jazz">jazz</option>
+              <option value="pop">pop</option>
+          </select>
       </div>
   </header>
 </template>
@@ -10,7 +16,12 @@
 <script>
 export default {
   name: 'Header',
-  props: ['logo']
+  props: ['logo'],
+  data(){
+      return {
+          selGenre:"all",
+      }
+  }
 }
 </script>
 

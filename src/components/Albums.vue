@@ -16,6 +16,7 @@ export default {
   components: {
       Album
   },
+  props: ['opr'],
   data(){
       return{
           albumsData: [],
