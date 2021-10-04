@@ -1,6 +1,6 @@
 <template>
   <div class="container-m">
-      <div class="albCont" v-for="(album, index) in albumsData" :key="index">
+      <div class="albCont" v-for="(album, index) in arrAlbums" :key="index">
           <Album :alb="album"/>
       </div>
   </div>
@@ -28,6 +28,16 @@ export default {
       .then((response) => {
           this.albumsData = response.data.response;
       });
+  },
+  computed: {
+      filteredList(){
+          const arrAlbums = this.albumsData.filter(
+              (elm) => {
+                  return elm.genre.toLowerCase() == this.opr
+              }
+          );
+          return arrAlbums;
+      }
   }
 }
 </script>
