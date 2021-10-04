@@ -18,7 +18,9 @@ export default {
     Albums,
   },
   data() {
-    filterExp: ""
+    return{ // Ho fixato la variabile
+      filterExp: ""
+    }
   },
   methods:{
     filterMet(filterSel){
