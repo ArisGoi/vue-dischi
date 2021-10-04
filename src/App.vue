@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <Header :logo="require('./assets/img/spotify-logo.png')" @search="filterSel"/>
+    <Header :logo="require('./assets/img/spotify-logo.png')" @filterSel="filterMet"/>
     <main>
-      <Albums :opr="filterSel"/>
+      <Albums :opr="filterExp"/>
     </main>
   </div>
 </template>
@@ -17,6 +17,15 @@ export default {
     Header,
     Albums,
   },
+  data() {
+    filterExp: ""
+  },
+  methods:{
+    filterMet(filterSel){
+      this.filterExp = filterSel;
+      console.log(this.filterExp);
+    }
+  }
 }
 </script>
 
