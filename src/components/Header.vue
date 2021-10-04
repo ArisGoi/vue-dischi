@@ -3,6 +3,7 @@
       <div class="container-l">
           <img class="logo" :src="`${logo}`" alt="Logo Spotify">
           <select v-model="selGenre" @change="$emit('filterSel', selGenre)">
+              <option value="none" selected disabled>--SELEZIONA UN GENERE--</option>
               <option value="">all</option>
               <option value="rock">rock</option>
               <option value="jazz">jazz</option>
@@ -32,10 +33,19 @@ export default {
     header{
         height: $header-height;
         background-color: $bg-header;
+        position: relative;
 
         .logo{
             height: calc($header-height - 20px);
             margin: 10px 0;
+        }
+
+        select{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 50px;
+            height: 25px;
         }
     }
 </style>

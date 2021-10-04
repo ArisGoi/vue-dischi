@@ -18,7 +18,7 @@ export default {
     Albums,
   },
   data() {
-    return{ // Ho fixato la variabile
+    return{
       filterExp: ""
     }
   },
