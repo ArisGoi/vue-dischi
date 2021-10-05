@@ -3,11 +3,8 @@
       <div class="container-l">
           <img class="logo" :src="`${logo}`" alt="Logo Spotify">
           <select v-model="selGenre" @change="$emit('filterSel', selGenre)">
-              <option value="none" selected disabled>--SELEZIONA UN GENERE--</option>
-              <option value="">all</option>
-              <option value="rock">rock</option>
-              <option value="jazz">jazz</option>
-              <option value="pop">pop</option>
+              <option value="">--SELEZIONA UN GENERE--</option>
+              <option v-for="genre in genreList" :value="genre" :key="genre">{{genre}}</option>
           </select>
       </div>
   </header>
@@ -17,7 +14,7 @@
 <script>
 export default {
   name: 'Header',
-  props: ['logo'],
+  props: ['logo', 'genreList'],
   data(){
       return {
           selGenre:"all",
